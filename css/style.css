@@ -59,14 +59,14 @@ section{
     padding: 19%;
 }
 .nation-text h5{
-    font-size: 14px;
+    font-size: 55px;
     font-weight: 400;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
 }
 .nation-text h1{
     font-family: 'Fondamento';
-    font-size: 90px;
+    font-size: 110px;
     line-height: 1;
     color: white;
     margin: 0 0 45px;
@@ -75,7 +75,7 @@ section{
     font-size: 18px;
     font-weight: 600;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .nation-text p{
     color: white;
