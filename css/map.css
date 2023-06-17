@@ -1,0 +1,56 @@
+svg{
+    width:100%;
+    height: auto;
+}
+
+g{
+    stroke: white;
+    stroke-opacity: 1;
+    stroke-width: 30px;
+    opacity: 0.4;
+}
+
+g:hover{
+    opacity: 0.9;
+}
+
+#rimhm{
+    opacity: 1;
+    fill:black;
+}
+
+#rimhm:hover{
+    opacity: 1;
+    fill:white;
+}
+
+#propast{
+    opacity: 1;
+}
+
+#propast:hover{
+    opacity: 1;
+}
+
+#deadmap{
+    stroke: gray;
+    opacity: 0.5;
+}
+
+#water{
+    fill:aqua;
+    opacity: 0.2;
+    stroke:aquamarine
+}
+
+#water:hover{
+    fill:aqua;
+    opacity: 0.4;
+}
+
+#mapa{
+    background: url("/images/181.jpg");
+    background-size: cover;
+    padding:0%;
+    box-shadow: 5px 10px 18px black;
+}

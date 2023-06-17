@@ -1,0 +1,201 @@
+#buy-sell {
+    padding-bottom:5%;
+}
+
+#buy-sell > div > div > button{
+    height: 5rem;
+}
+
+#buy-sell img{
+    width:100%;
+    box-shadow: 5px 10px 18px black;
+    border-radius: 30px;
+}
+
+#buy-sell p img{
+    width:auto;
+}
+
+#buy-sell h4{
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding:2%;
+    border-radius: 30px;
+    text-decoration: overline;
+    text-shadow: 2.5px 5px 9px black;
+}
+
+#main > div > h1{
+    font-weight: 700;
+    font-size: 5vh;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+    text-align: center;
+    text-shadow: 2.5px 5px 9px black;
+}
+
+#buy-sell > div > p{
+    color: white;
+    font-size: 2vh;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+#buy-sell .btn-danger{
+    margin:0 1% 1% 0;
+    padding: 0% 2%;
+    font-weight: 700;
+    font-size: 1.5vh;
+    color: rgba(49, 13, 6,1);
+    background-color: white;
+    border: 0px solid;
+    transition: all .55s ease;
+}
+
+#buy-sell .btn-danger:hover{
+    transform: translateY(-0.4rem);
+    transition: all .55s ease;
+}
+
+#buy-sell .btn-outline-danger{
+    margin:0 1% 1% 0;
+    padding: 0% 2%;
+    font-weight: 500;
+    font-size: 1.5vh;
+    color: white;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: white;
+    transition: all .55s ease;
+}
+
+#buy-sell .btn-outline-danger:hover{
+    transform: translateY(-0.4rem);
+    transition: all .55s ease;
+}
+
+.input-group {
+    display:block;
+}
+
+#iconio{
+    border-radius: 0px!important;
+    box-shadow: none!important;
+}
+
+#warehouse{
+    background: url("/images/header.jpg");
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 65%;
+    padding: 1% 2%!important;
+}
+
+.stats{
+    float: right;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    color: white;
+    width:20%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    line-height: 1.9;
+    padding: 0.8%;
+    transition: all .55s ease;
+    margin: auto;
+}
+
+.stats-item{
+    font-size: 1.5vh;
+    text-align: right;
+}
+
+.stats-item-h{
+    color:gray;
+    padding: 0;
+    font-size: 1.3vh;
+    text-align: right;
+}
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: right;
+    width: 3%;
+    height: auto;
+  }
+
+  .tab i{
+    font-size: 2vh;
+    padding-left:0.2vh;
+  }
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 17px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgba(49, 13, 6, 0.5);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: rgba(49, 13, 6, 1);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 0px;
+  width: 97%;
+  height: auto;
+}
+
+
+@media (max-width:1920px){
+    .tab button {
+        padding: 10px 7px;
+      }
+}
+
+@media (max-width:1600px){
+    .tab button {
+        padding: 12px 6px;
+      }
+}
+
+@media (max-width:1360px){
+    .tab button {
+        padding: 12px 4px;
+      }
+}
+
+@media (max-width:770px){
+    .tab button {
+        border-radius: 0px;
+        padding: 12px 0;
+      }
+}

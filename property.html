@@ -1,4 +1,33 @@
 <html lang="en">
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+    </script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,30 +64,8 @@
     </header>
     <div class="container-fluid" id="body">
         <div class="m-4">
-            <div class="nation-all">
-            <div class="nation"><a href="/index-kartago.html" class="nation"><img src="/images/carthcolor.png" alt=""></a></div>
-            <div class="nation"><a href="/index-kelti.html" class="nation"><img src="/images/celtcolor.png" alt=""></a></div>
-            <div class="nation"><a href="/index-rim.html" class="nation"><img src="/images/rim4.png" alt=""></a></div>
-            <div class="nation"><a href="/index-germani.html" class="nation"><img src="/images/germdarkcolor.png" alt=""></a></div>
-            <div class="nation"><a href="/index-reci.html" class="nation"><img src="/images/greekcolor.png" alt=""></a></div>
-            <div class="nation"><a href="/index-skythi.html" class="nation"><img src="/images/skytcolor.png" alt=""></a></div>
-            <div class="nation"><a href="/index-persie.html" class="nation"><img src="/images/perscolor.png" alt=""></a></div>
-            <div class="nation"><a href="/index-egypt.html" class="nation"><img src="/images/egyptcolor.png" alt=""></a></div>
-        </div>
-            <nav class="navbar navbar-expand-md navbar-toggler">
-                        <a class="navbar-brand" id="logo" href="/index.html">Roman Empire</a>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"><i class="ri-menu-4-fill"></i>Menu</span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ms-auto">
-                            <a href="/index.html" class="nav-item nav-link">Home</a>
-                            <a href="/production.html" class="nav-item nav-link">Production</a>
-                            <a href="/property.html" class="nav-item nav-link">Property</a>
-                            <a href="#" class="nav-item nav-link" id="none-overline"><i class="ri-logout-circle-r-line"></i></a>
-                    </div>
-                </div>
-            </nav>
+        <div w3-include-html="/nations.html"></div>
+        <div w3-include-html="/navigation.html"></div>
         <div class="container-fluid" id="main">
             <div class="row"><h1>PROPERTY</h1></div>
             <div class="row">
@@ -120,6 +127,10 @@
 
     <!---custom js link--->
     <script src="js/script.js"></script>    
+
+    <script>
+        includeHTML();
+        </script>
 </body>
 </html>
     <!---19 min--->
